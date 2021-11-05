@@ -1,0 +1,91 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.navbar .login .hidden a{
+    color:green;
+    text-decoration: none;
+    font-size: 20px;
+    font: 500;
+}
+.login .loginbtn{
+    margin-right: 20px;
+}
+.login .hidden a:hover{
+    color: black;
+}
+.home{
+    margin: 5%;
+}
+.home img{
+    width: 100%;
+    height: 400px;
+}
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: aqua;
+}
+
+.home h1{
+    color: aqua;
+    text-align: center;
+    background-image: url(images/home.jpg) no-repeat;
+}
+.rent-house{
+    margin: 10px 20px;
+}
+
+.register{
+    text-align: center;
+    margin-top: 50px;
+}
+.register a{
+    display: inline;
+    margin: 50px;
+    background-color: aqua;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.register a:hover{
+    background-color: rgb(137, 209, 185);
+}
+/* login */
+.col-md-6 img{
+    width: 100%;
+    height: 100%;
+}
+
+/* ############ in add_property.balde.php ######## */
+.row{
+    margin: 50px 30px;
+    padding: 5%;
+}
+.submit button{
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.tbl{
+    margin: 20px;
+}
+
+@media only screen and (max-width: 750px) {
+    .register{
+        flex-direction: column;
+    }
+    .register a{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+    }
+}
