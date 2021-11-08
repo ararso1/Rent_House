@@ -29,7 +29,7 @@ class CreateOwnersTable extends Migration
             $table->string('kitchen');
             $table->string('bathrooms');
             $table->string('description');
-            $table->string('photo')->nullable();
+            $table->string('photo');
             $table->timestamps();
         });
     }

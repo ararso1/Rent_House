@@ -8,8 +8,13 @@ use App\Models\owner;
 class ownerController extends Controller
 {
     //
+    function index(){
+        $data = owner::all();
+        return view('/welcome', ['owners'=>$data]);  
+    }
     public function owner(Request $req){
         $owner = new owner();
+        
         $owner->state=$req->state;
         $owner->zone=$req->zone;
         $owner->district=$req->district;
@@ -24,7 +29,14 @@ class ownerController extends Controller
         $owner->kitchen=$req->kitchen;
         $owner->bathrooms=$req->bathrooms;
         $owner->description=$req->description;
-        $owner->photo=$req->photo;
+        
+        if($req->hasfile('photo')){
+            $file=$req->file('photo');
+            $extention=$file->getClientOriginalExtention();
+            $filenName=time().'.'.$extention;
+            $file->photo=$filenName;
+        }
+
         $owner->save();
 
         return redirect('/add_property');
@@ -36,4 +48,5 @@ class ownerController extends Controller
         $data = owner::all();
         return view('/view_property', ['owners'=>$data]);
     }
+
 }

@@ -14,9 +14,7 @@ use App\Http\Controllers\ownerController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ownerController::class, 'index']);
 Route::get('/view_property', [ownerController::class, 'view_property']);
 
 Route::post('/add_property',[ownerController::class, 'owner'] );

@@ -58,7 +58,7 @@
             <td>{{$item->price}}</td>
             <td>{{$item->rooms}}</td>
             <td>{{$item->bed_rooms}}</td>
-            <td>{{$item->kitchen}}</td>
+            <td>{{$item['kitchen']}}</td>
             <td>{{$item->bathrooms}}</td>
             <td>{{$item->description}}</td>
             <td>{{$item->photo}}</td>
