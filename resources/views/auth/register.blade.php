@@ -38,6 +38,14 @@
                 <x-jet-label for="address" value="{{ __('Address') }}" />
                 <x-jet-input id="address" class="block mt-1 w-full" type="text" name="address" placeholder="Enter your address" required autocomplete="new-password" />
             </div>
+            <div class="mt-4">
+                <x-jet-label for="address" value="{{ __('Role') }}" />
+                <input type="radio" id="o" name="role"  value="true">
+                <label for="owner">Owner</label><br>
+                <input type="radio" id="t" name="role" value="false">
+                <label for="tenant">Tenant</label><br>
+            </div>
+
 {{-- 
             <div class="mt-4">
                 <x-jet-label for="id_card" value="{{ __('Upload Your ID') }}" />
@@ -63,7 +71,7 @@
 
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
+                    {{ __('Already registered: Login?') }}
                 </a>
 
                 <x-jet-button class="ml-4">

@@ -23,7 +23,7 @@
   
 
 
-  <form class="row g-3 needs-validation" action="add_property" method="POST" novalidate>
+  <form class="row g-3 needs-validation" action="add_property" method="POST" enctype="multipart/form-data"ovalidate>
     @csrf
     <div class="col-md-6">
       <div class="col-md-10">
@@ -130,7 +130,7 @@
     </div>
     <div class="col-md-10">
       <label for="validationCustom02" class="form-label">Upload Photos:</label>
-      <input type="file" class="form-control" name="photo" id="validationCustom02" placeholder="Upload photo of the home" multiple required>
+      <input type="file" class="form-control" name="photo" id="validationCustom02" required>
       <div class="invalid-feedback">
         Please upload a valid images of house.
       </div>

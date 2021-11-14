@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ownerController;
+use App\Http\Controllers\redirectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,13 @@ use App\Http\Controllers\ownerController;
 Route::get('/', [ownerController::class, 'index']);
 Route::get('/view_property', [ownerController::class, 'view_property']);
 
+/* redirect of user */
+Route::get('redirects', [redirectController::class, 'redirect']);
+
+
 Route::post('/add_property',[ownerController::class, 'owner'] );
+/* to delete from table */
+Route::get('delete/{id}', [ownerController::class, 'delete']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

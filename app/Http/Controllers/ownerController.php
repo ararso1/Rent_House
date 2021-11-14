@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\owner;
+use Illuminate\Validation\Validator;
+
 
 class ownerController extends Controller
 {
@@ -12,8 +14,20 @@ class ownerController extends Controller
         $data = owner::all();
         return view('/welcome', ['owners'=>$data]);  
     }
+    
+
+
+
     public function owner(Request $req){
+        
         $owner = new owner();
+
+       /*  $req->validate([
+            'photo'=>'require|mimes:jpg,png,jpeg|max:5048'
+        ]); */
+
+        $imageName=time().'_'.$req->name.'.'.$req->photo;
+        $req->photo->move(public_path('images'),$imageName);
         
         $owner->state=$req->state;
         $owner->zone=$req->zone;
@@ -29,24 +43,21 @@ class ownerController extends Controller
         $owner->kitchen=$req->kitchen;
         $owner->bathrooms=$req->bathrooms;
         $owner->description=$req->description;
-        
-        if($req->hasfile('photo')){
-            $file=$req->file('photo');
-            $extention=$file->getClientOriginalExtention();
-            $filenName=time().'.'.$extention;
-            $file->photo=$filenName;
-        }
-
+        $owner->photo=$imageName;
         $owner->save();
 
         return redirect('/add_property');
         
-
     }
     
     public function view_property(){
         $data = owner::all();
         return view('/view_property', ['owners'=>$data]);
+    }
+    function delete($id){
+        $data = owner::find($id);
+        $data->delete();
+        return redirect('view_property');
     }
 
 }

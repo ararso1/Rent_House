@@ -64,7 +64,7 @@
             <td>{{$item->photo}}</td>
             <td>
               <a href="#" class="btn btn-primary">Edit</a>
-              <a href="#" class="btn btn-danger">Delete</a>
+              <a href="{{'delete/'.$item['id']}}" class="btn btn-danger">Delete</a>
             </td>      
           </tr>
               
