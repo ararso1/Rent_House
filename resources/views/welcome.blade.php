@@ -74,9 +74,9 @@
 <section class="rent-house">
 
   <div class="card-group">
-    @foreach($owners as $item) 
+    @foreach ($owner as $item)
       <div class="card"> 
-        <img src="{{asset($item->zone)}}" class="card-img-top" alt="images">
+        <img src="{{asset('images/images6.jpg')}}" class="card-img-top" alt="images">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
@@ -84,7 +84,57 @@
           <a href="#" class="btn btn-primary">See details</a>
         </div>
       </div>
-    @endforeach
+      @endforeach
+      <div class="card"> 
+        <img src="{{asset('images/images7.jpg')}}" class="card-img-top" alt="images">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <a href="#" class="btn btn-primary">See details</a>
+        </div>
+      </div>
+      <div class="card"> 
+        <img src="{{asset('images/images5.jpg')}}" class="card-img-top" alt="images">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <a href="#" class="btn btn-primary">See details</a>
+        </div>
+      </div>
+  </div>
+      <div class="card-group">
+    
+        <div class="card"> 
+          <img src="{{asset('images/images4.jpg')}}" class="card-img-top" alt="images">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <a href="#" class="btn btn-primary">See details</a>
+          </div>
+        </div>
+        <div class="card"> 
+          <img src="{{asset('images/images3.jpg')}}" class="card-img-top" alt="images">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <a href="#" class="btn btn-primary">See details</a>
+          </div>
+        </div>
+        <div class="card"> 
+          <img src="{{asset('images/images2.jpg')}}" class="card-img-top" alt="images">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <a href="#" class="btn btn-primary">See details</a>
+          </div>
+        </div>
+    </div>
+  
 
 </section>
 

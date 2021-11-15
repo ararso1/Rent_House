@@ -4,7 +4,8 @@
             {{ __('Welcome Tenant ') }}
         </h2>
     </x-slot>
-    
+    @include('welcome')
+
 
  
 </x-app-layout>

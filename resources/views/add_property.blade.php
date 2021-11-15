@@ -23,7 +23,7 @@
   
 
 
-  <form class="row g-3 needs-validation" action="add_property" method="POST" enctype="multipart/form-data"ovalidate>
+  <form class="row g-3 needs-validation" action="add_property" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="col-md-6">
       <div class="col-md-10">

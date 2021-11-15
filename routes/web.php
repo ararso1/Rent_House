@@ -14,8 +14,9 @@ use App\Http\Controllers\redirectController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/* welcome route */
 Route::get('/', [ownerController::class, 'index']);
+
 Route::get('/view_property', [ownerController::class, 'view_property']);
 
 /* redirect of user */
@@ -30,9 +31,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/welcome', function () {
+/* Route::middleware(['auth:sanctum', 'verified'])->get('/welcome', function () {
     return view('welcome');
-})->name('welcome');
+})->name('welcome'); */
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/add_property', function () {
     return view('add_property');

@@ -21,5 +21,6 @@ class redirectController extends Controller
         else{
             return view('tenants.tenants');
         }
-    }   
+    } 
+     
 }

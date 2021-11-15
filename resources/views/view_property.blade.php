@@ -61,7 +61,7 @@
             <td>{{$item['kitchen']}}</td>
             <td>{{$item->bathrooms}}</td>
             <td>{{$item->description}}</td>
-            <td>{{$item->photo}}</td>
+            <td><img src="{{asset('images/'.$item->photo)}}" alt="image" width="100px" height="100px"></td>
             <td>
               <a href="#" class="btn btn-primary">Edit</a>
               <a href="{{'delete/'.$item['id']}}" class="btn btn-danger">Delete</a>

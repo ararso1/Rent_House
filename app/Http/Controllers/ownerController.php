@@ -22,11 +22,11 @@ class ownerController extends Controller
         
         $owner = new owner();
 
-       /*  $req->validate([
-            'photo'=>'require|mimes:jpg,png,jpeg|max:5048'
-        ]); */
+         $req->validate([
+            'photo'=>'required|mimes:jpg,png,jpeg|max:5048'
+        ]);
 
-        $imageName=time().'_'.$req->name.'.'.$req->photo;
+        $imageName=time().'_'.$req->name.'.'.$req->photo->getClientOriginalExtension();
         $req->photo->move(public_path('images'),$imageName);
         
         $owner->state=$req->state;
