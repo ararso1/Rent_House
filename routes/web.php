@@ -39,10 +39,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/add_property', function (
     return view('add_property');
 })->name('add_property');
 
-/* Route::middleware(['auth:sanctum', 'verified'])->get('/view_property', function () {
+Route::middleware(['auth:sanctum', 'verified'])->get('/view_property', function () {
     return view('view_property');
 })->name('view_property');
- */
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/update_property', function () {
     return view('update_property');
 })->name('update_property');

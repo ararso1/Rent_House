@@ -21,6 +21,11 @@ class redirectController extends Controller
         else{
             return view('tenants.tenants');
         }
+    }
+    function logouts(){
+        session::flush();
+        Auth::logout();
+        return redirect('login');
     } 
      
 }

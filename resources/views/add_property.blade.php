@@ -20,7 +20,6 @@
           {{ __('Add property') }}
       </h2>
     </x-slot>
-  
 
 
   <form class="row g-3 needs-validation" action="add_property" method="POST" enctype="multipart/form-data">
